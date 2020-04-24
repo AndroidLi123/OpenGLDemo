@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.opengl.GLSurfaceView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原画"></Button>
+
+        <Button
+            android:id="@+id/btn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黑白">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="负片">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_cold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="冷调">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/btn_nostalgia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="怀旧">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_mosaic"
+            android:text="马赛克"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
