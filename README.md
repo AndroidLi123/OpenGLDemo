@@ -1,4 +1,3 @@
-## OpenGLDemo
 
 ### 目前已经完成的功能：  
 
@@ -18,4 +17,8 @@
 
 3D OBJ模型  
 
-VR效果
+VR效果  
+
+FFmpeg解码音频  
+
+OpenSL播放音频
