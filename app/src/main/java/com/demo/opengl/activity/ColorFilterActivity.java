@@ -11,9 +11,9 @@ import com.demo.opengl.render.BaseRender;
 import com.demo.opengl.render.ColorRender;
 
 /**
- * Copyright 2020 VW-Mobvoi Inc. All Rights Reserved
  *
- * @author: xwli@vw-mobvoi.com
+ *
+ * @author: xwli
  * @created: 2020/04/24
  * @content: 颜色滤镜
  * @version: 1.0.0

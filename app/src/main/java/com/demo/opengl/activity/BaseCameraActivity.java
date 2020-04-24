@@ -31,9 +31,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Copyright 2020 VW-Mobvoi Inc. All Rights Reserved
  *
- * @author: xwli@vw-mobvoi.com
+ *
+ * @author: xwli
  * @created: 2020/04/24
  * @content: 相机预览基类Activity
  * @version: 1.0.0

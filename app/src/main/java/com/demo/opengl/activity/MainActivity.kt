@@ -7,6 +7,14 @@ import android.widget.Button
 import com.demo.opengl.R
 import com.demo.opengl.utils.Util
 
+/**
+ *
+ *
+ * @author: xwli
+ * @created: 2020/04/24
+ * @content: 入口Activity
+ * @version: 1.0.0
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

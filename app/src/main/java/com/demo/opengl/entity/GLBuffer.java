@@ -5,9 +5,9 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 /**
- * Copyright 2020 VW-Mobvoi Inc. All Rights Reserved
  *
- * @author: xwli@vw-mobvoi.com
+ *
+ * @author: xwli
  * @created: 2020/02/20
  * @content:
  * @version: 1.0.0

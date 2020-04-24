@@ -13,9 +13,9 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Copyright 2020 VW-Mobvoi Inc. All Rights Reserved
  *
- * @author: xwli@vw-mobvoi.com
+ *
+ * @author: xwli
  * @created: 2020/04/24
  * @content: 美颜Render
  * @version: 1.0.0

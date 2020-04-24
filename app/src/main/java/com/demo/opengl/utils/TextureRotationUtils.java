@@ -1,8 +1,5 @@
 package com.demo.opengl.utils;
 
-/**
- * Created by cain on 17-7-26.
- */
 
 public class TextureRotationUtils {
 

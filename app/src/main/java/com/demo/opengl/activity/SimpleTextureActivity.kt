@@ -11,8 +11,8 @@ import com.demo.opengl.render.SimpleTextureRender
 import kotlinx.android.synthetic.main.activity_cube.*
 
 /**
- * Copyright 2020 VW-Mobvoi Inc. All Rights Reserved
- * @author: xwli@vw-mobvoi.com
+ * 
+ * @author: xwli
  * @created: 2020/04/14
  * @content:纹理立方体
  * @version: 1.0.0
