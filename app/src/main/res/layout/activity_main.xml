@@ -39,4 +39,10 @@
         android:text="相机颜色滤镜"
         />
 
+    <Button
+        android:id="@+id/btn_player"
+        android:text="FFmpeg解码 OpenSL播放音频"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Button>
+
 </LinearLayout>

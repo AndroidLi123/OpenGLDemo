@@ -26,16 +26,15 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public abstract class BaseRender implements GLSurfaceView.Renderer {
     protected abstract int drawFrameBuffer(GL10 gl, int textureId, FloatBuffer mVertexBuffer,FloatBuffer mTextureBuffer);
-
+    private int textureId;
+    private float[] transformMatrix = new float[16];
     private GLImageFilter imageFilter;
     private GLImageOESInputFilter inputFilter;
     private RenderSurfaceListener renderSurfaceListener;
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mTextureBuffer;
-    SurfaceTexture mSurfaceTexture;
-    protected int textureId;
+    protected SurfaceTexture mSurfaceTexture;
     protected Context mContext;
-    private float[] transformMatrix = new float[16];
 
     public BaseRender(Context context) {
         this.mContext = context;

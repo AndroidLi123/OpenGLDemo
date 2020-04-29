@@ -23,8 +23,7 @@ class SimpleTextureActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_simple_texture)
         updateSample(glSurfaceViewContainer, SimpleTextureRender())
-
-
+        
     }
 
     private fun updateSample(rootView: View, renderer: GLSurfaceView.Renderer) {

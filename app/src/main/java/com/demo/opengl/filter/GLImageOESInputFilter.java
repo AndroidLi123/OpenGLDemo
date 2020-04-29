@@ -7,10 +7,6 @@ import android.opengl.GLES30;
 import com.demo.opengl.utils.OpenGLUtils;
 
 
-/**
- * 外部纹理(OES纹理)输入
- * Created by cain on 2017/7/9.
- */
 
 public class GLImageOESInputFilter extends GLImageFilter {
 

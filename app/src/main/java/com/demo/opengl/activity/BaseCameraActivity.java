@@ -21,6 +21,8 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Size;
 import android.view.Surface;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -31,8 +33,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
- *
  * @author: xwli
  * @created: 2020/04/24
  * @content: 相机预览基类Activity
@@ -41,7 +41,9 @@ import java.util.List;
 public abstract class BaseCameraActivity extends AppCompatActivity implements BaseRender.RenderSurfaceListener {
 
     protected abstract BaseRender createRender(Context context);
+
     protected abstract GLSurfaceView createGLSurfaceView();
+
     protected abstract int getLayoutId();
 
     private static final String TAG = "Camera2SurfaceActivity";
@@ -166,6 +168,7 @@ public abstract class BaseCameraActivity extends AppCompatActivity implements Ba
     }
 
     private void initCamera() {
+
         cameraManager = (CameraManager) getApplication().
                 getSystemService(Context.CAMERA_SERVICE);
         photoSize = getCameraOutputSizes(cameraId, SurfaceTexture.class);
@@ -173,6 +176,7 @@ public abstract class BaseCameraActivity extends AppCompatActivity implements Ba
         mPreviewImageReader = ImageReader.newInstance(photoSize.getWidth(),
                 photoSize.getHeight(), ImageFormat.YUV_420_888
                 , 2);
+
         mPreviewImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
             @Override
             public void onImageAvailable(final ImageReader reader) {
@@ -216,11 +220,20 @@ public abstract class BaseCameraActivity extends AppCompatActivity implements Ba
             StreamConfigurationMap configs = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             List<Size> sizes = Arrays.asList(configs.getOutputSizes(clz));
             int key = 0;
+            Log.d("glSurfaceView", width + "  " + height);
+
             for (int i = 0; i < sizes.size(); i++) {
                 Size size = sizes.get(i);
+                Log.d("previewsize", size.getWidth() + "  " + size.getHeight());
                 if ((float) size.getHeight() / size.getWidth() == radio
                 ) {
                     key = i;
+                    Log.d("heshi", size.getWidth() + "  " + size.getHeight());
+
+                }
+
+                if (size.getWidth() == 1280 && size.getHeight() == 720) {
+                    return size;
                 }
             }
 

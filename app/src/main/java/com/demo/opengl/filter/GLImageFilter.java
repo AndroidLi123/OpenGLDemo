@@ -15,7 +15,7 @@ import java.util.LinkedList;
 
 /**
  * 基类滤镜
- * Created by cain on 2017/7/9.
+ *
  */
 
 public class GLImageFilter {
@@ -159,9 +159,6 @@ public class GLImageFilter {
         GLES30.glUseProgram(mProgramHandle);
         // 运行延时任务
         runPendingOnDrawTasks();
-
-
-
         // 绘制纹理
         onDrawTexture(textureId, vertexBuffer, textureBuffer);
 
@@ -190,10 +187,8 @@ public class GLImageFilter {
         GLES30.glUseProgram(mProgramHandle);
         // 运行延时任务，这个要放在glUseProgram之后，要不然某些设置项会不生效
         runPendingOnDrawTasks();
-
         // 绘制纹理
         onDrawTexture(textureId, vertexBuffer, textureBuffer);
-
         GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, 0);
         Log.d("drawFrameBuffer","drawFrameBuffer");
         return mFrameBufferTextures[0];
@@ -245,7 +240,7 @@ public class GLImageFilter {
         GLES30.glBindTexture(getTextureType(), textureId);
         GLES30.glUniform1i(mInputTextureHandle, 0);
         onDrawFrameBegin();
-        onDrawFrame();
+        onDrawFrame(vertexBuffer);
         onDrawFrameAfter();
         // 解绑
         GLES30.glDisableVertexAttribArray(mPositionHandle);
@@ -265,8 +260,9 @@ public class GLImageFilter {
     /**
      * 绘制图像
      */
-    protected void onDrawFrame() {
-        GLES30.glDrawArrays(GLES30.GL_TRIANGLE_STRIP, 0, mVertexCount);
+    protected void onDrawFrame(FloatBuffer mVertexIndexBuffer) {
+        GLES30.glDrawArrays(GLES30.GL_TRIANGLE_FAN, 0, mVertexCount);
+        //GLES30.glDrawElements(GLES30.GL_TRIANGLES, 8, GLES30.GL_UNSIGNED_SHORT, mVertexIndexBuffer);
     }
 
     /**
@@ -338,7 +334,6 @@ public class GLImageFilter {
             GLES30.glDeleteFramebuffers(1, mFrameBuffers, 0);
             mFrameBuffers = null;
         }
-        mFrameWidth = -1;
         mFrameWidth = -1;
     }
 

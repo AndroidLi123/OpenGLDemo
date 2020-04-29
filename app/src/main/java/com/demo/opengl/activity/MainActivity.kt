@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         var btnTexture:Button = findViewById(R.id.btn_texture)
         var btnFilter:Button = findViewById(R.id.btn_filter)
         var btnColor:Button = findViewById(R.id.btn_color)
+        var btnPlayer:Button = findViewById(R.id.btn_player)
         btnCube.setOnClickListener{
             val intent = Intent(this@MainActivity, CubeActivity::class.java)
             this@MainActivity.startActivity(intent)
@@ -48,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
         btnColor.setOnClickListener{
             val intent = Intent(this@MainActivity, ColorFilterActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        }
+
+        btnPlayer.setOnClickListener{
+            val intent = Intent(this@MainActivity, PlayerActivity::class.java)
             this@MainActivity.startActivity(intent)
         }
     }
