@@ -24,10 +24,9 @@ extern "C" {
 #include <mutex>
 #include <queue>
 
-#define LOGI(FORMAT, ...) __android_log_print(ANDROID_LOG_INFO,"FFMPEG",FORMAT,##__VA_ARGS__);  // 输出到AS的log中
-#define LOGE(FORMAT, ...) __android_log_print(ANDROID_LOG_ERROR,"FFMPEG",FORMAT,##__VA_ARGS__);
-
-#define MAX_AUDIO_FRAME_SIZE 192000 // 1 second of 48khz 32bit audio   48000 * (32/8)
+#define LOGI(FORMAT, ...) __android_log_print(ANDROID_LOG_INFO,"HusterYP",FORMAT,##__VA_ARGS__);  // 输出到AS的log中
+#define LOGE(FORMAT, ...) __android_log_print(ANDROID_LOG_ERROR,"HusterYP",FORMAT,##__VA_ARGS__);
+#define MAX_AUDIO_FRAME_SIZE 192000
 
 extern struct OpenStruct {
     AVFrame *avFrame;

@@ -12,7 +12,6 @@ callJava::callJava( JavaVM *javaVM,JNIEnv *env, jobject *obj) {
 
 void callJava::timeCallback(double currentTime,int totalTime) {
 
-
     JNIEnv *jniEnv;
 
     javaVM->AttachCurrentThread(&jniEnv, nullptr);
