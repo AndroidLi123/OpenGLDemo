@@ -16,7 +16,7 @@ callJava *myCallJava = nullptr;
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_demo_opengl_activity_PlayerActivity_playWithFFmpeg(JNIEnv *env, jobject instance,
+Java_com_deomo_ffmpeglib_Player_playWithFFmpeg(JNIEnv *env, jobject instance,
                                                             jstring pamPath_) {
     //release();
     const char *pamPath = env->GetStringUTFChars(pamPath_, nullptr);

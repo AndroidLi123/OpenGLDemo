@@ -17,20 +17,7 @@ android {
         ndk {
             abiFilters "armeabi-v7a" //, "x86", "armeabi"  按需设置
         }
-        sourceSets {
-            main {
-                jniLibs.srcDirs = ['src/main/jni/ffmpeg']
-            }
-        }
-        externalNativeBuild {
-            cmake {
-                cppFlags "-frtti -fexceptions"
 
-            }
-            ndk {
-                abiFilters 'armeabi-v7a'
-            }
-        }
 
     }
     buildTypes {
@@ -39,11 +26,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path 'CMakeLists.txt'
-        }
-    }
+
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
@@ -61,4 +44,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    compile project(path: ':ffmpeglib')
 }
