@@ -232,9 +232,6 @@ public abstract class BaseCameraActivity extends AppCompatActivity implements Ba
 
                 }
 
-                if (size.getWidth() == 1280 && size.getHeight() == 720) {
-                    return size;
-                }
             }
 
             return sizes.get(key);
